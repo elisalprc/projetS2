@@ -11,7 +11,7 @@ import java.util.ArrayList;
  * @author clema
  */
 public class Operateur extends Personne {
-    private ArrayList<Equipement> ListeEquipements = new ArrayList<Equipement>();
+    private ArrayList<Equipement> ListeEquipements;
 
     public ArrayList<Equipement> getListeEquipements() {
         return ListeEquipements;
