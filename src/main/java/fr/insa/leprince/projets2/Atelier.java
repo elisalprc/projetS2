@@ -80,6 +80,7 @@ public class Atelier {
         }
     
     //Methodes:
+        //Ajout d'un élément dans les listes:
         public void ajoutMachine(Machine machine){
             listeMachines.add(machine); 
         }
@@ -94,6 +95,23 @@ public class Atelier {
         }
         public void ajoutGammeFabrication(Gamme gamme){
             listeGamme.add(gamme);
+        }
+        
+        //suppression d'un élément des listes:
+        public void supprimerMachine(int index){
+            listeMachines.remove(index); 
+        }
+        public void supprimerPoste(int index){
+            listePostes.remove(index);
+        }
+        public void supprimerProduit(int index){
+            listeProduits.remove(index);
+        }
+        public void supprimerOperateur(int index){
+            listeOperateurs.remove(index);
+        }
+        public void supprimerGammeFabrication(int index){
+            listeGamme.remove(index);
         }
        
 }
