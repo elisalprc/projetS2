@@ -2,6 +2,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  */
 
+// enregistrer ses modifs : [Team] commit puis push
+//récupérer le fichier le plus récent : [TEAM] [remote] pull
+
 package fr.insa.leprince.projets2;
 
 /**
