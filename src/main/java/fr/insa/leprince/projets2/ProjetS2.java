@@ -4,6 +4,7 @@
 
 // enregistrer ses modifs : [Team] commit puis push
 //récupérer le fichier le plus récent : [TEAM] [remote] pull
+// bien selectionner la localisation github avec l'url (la 2e)
 
 package fr.insa.leprince.projets2;
 
