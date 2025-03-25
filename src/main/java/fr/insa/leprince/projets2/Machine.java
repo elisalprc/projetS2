@@ -94,4 +94,13 @@ public class Machine extends Equipement {
         this.etat = etat;
     }
     
+    public void afficherMachine(){
+        System.out.println("référence de la machine = "+ this.refMachine);
+        System.out.println("type de la machine = "+ this.type);
+        System.out.println("dmachine = "+ this.dmachine);
+        System.out.println("Origine = ("+ this.origine_x + "," + this.origine_y + ")");
+        System.out.println("cout de la Machine = "+ this.cout);
+        System.out.println("temps d'utilisation de la Machine = "+ this.t);
+        System.out.println("Etat de la Machine = "+ this.etat);
+    }
 }
