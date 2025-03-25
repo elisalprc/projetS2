@@ -17,7 +17,7 @@ public class Atelier {
         private ArrayList listePostes;
         private ArrayList listeProduits;
         private ArrayList listeGamme;
-        private ArrayList listeOpérateurs;
+        private ArrayList listeOperateurs;
         
     //Getters :
         public String getNom(){
@@ -40,8 +40,8 @@ public class Atelier {
             return listeGamme;
         }
 
-        public ArrayList getListeOpérateurs() {
-            return listeOpérateurs;
+        public ArrayList getListeOperateurs() {
+            return listeOperateurs;
         }
         
     //Setters :
@@ -65,8 +65,8 @@ public class Atelier {
             this.listeGamme = listeGamme;
         }
 
-        public void setListeOpérateurs(ArrayList listeOpérateurs) {
-            this.listeOpérateurs = listeOpérateurs;
+        public void setListeOperateurs(ArrayList listeOpérateurs) {
+            this.listeOperateurs = listeOpérateurs;
         }
         
     //Constructeur:
@@ -76,9 +76,24 @@ public class Atelier {
             this.listePostes = listePostes;
             this.listeProduits = listeProduits;
             this.listeGamme = listeGamme;
-            this.listeOpérateurs = listeOpérateurs;
+            this.listeOperateurs = listeOperateurs;
         }
     
     //Methodes:
-            
+        public void ajoutMachine(Machine machine){
+            listeMachines.add(machine); 
+        }
+        public void ajoutPoste(Poste poste){
+            listePostes.add(poste);
+        }
+        public void ajoutProduit(Produit produit){
+            listeProduits.add(produit);
+        }
+        public void ajoutOperateur(Operateur operateur){
+            listeOperateurs.add(operateur);
+        }
+        public void ajoutGammeFabrication(Gamme gamme){
+            listeGamme.add(gamme);
+        }
+       
 }
