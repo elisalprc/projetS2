@@ -70,7 +70,7 @@ public class Atelier {
         }
         
     //Constructeur:
-        public Atelier(String nom, ArrayList listeMachines, ArrayList listePostes, ArrayList listeProduits, ArrayList listeGamme, ArrayList listeOpérateurs) {
+        public Atelier(String nom, ArrayList listeMachines, ArrayList listePostes, ArrayList listeProduits, ArrayList listeGamme, ArrayList listeOperateurs) {
             this.nom = nom;
             this.listeMachines = listeMachines;
             this.listePostes = listePostes;
