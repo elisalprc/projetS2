@@ -5,9 +5,6 @@
 package fr.insa.leprince.projets2;
 
 import java.util.ArrayList;
-import class Operation;
-import class Equipement;
-
 /**
  *
  * @author eleprince01
@@ -17,7 +14,7 @@ public class Gamme {
     private String refGamme;
     private ArrayList<Operation> listeOperations;
     private ArrayList<Equipement> listeEquipement; //indice pair = machine et indice impair = poste ??
-    private Object listeGamme;
+    private ArrayList<Gamme>listeGamme;
     
 //Constructeur:
     public Gamme(String refGamme, ArrayList<Operation> listeOperations, ArrayList<Equipement> listeEquipement){
@@ -61,18 +58,19 @@ public class Gamme {
     //afficher une gamme
     public void afficherGamme(Gamme gamme){
     System.out.println("Pour réaliser la gamme de fabrication "+refGamme+" il faut les operations suivantes : "+listeOperations+" ainsi que les equipements suivants : "+listeEquipement);
-}
-        
-}
-//creerGamme () ;
+    }
+    //creerGamme () ;
     public void creerGamme(String ref,ArrayList<Operation> listeOperations, ArrayList<Equipement> listeEquipement){
         Gamme gamme = newGamme (ref, listeOperations, ListeEquipement);
-
-//cout d'une Gamme:
+        listeGamme.add(gamme);
+    }
+    //cout d'une Gamme:
     public float coutGamme(){
-// en fonction de l'equipement utilisé et de la durée de l'opp ?
+        // en fonction de l'equipement utilisé et de la durée de l'opp ?
+        return 5; //pour l'insstat ça sera 5 euro TT
+    }
 }
-}
+
 
 
 
