@@ -103,4 +103,14 @@ public class Machine extends Equipement {
         System.out.println("temps d'utilisation de la Machine = "+ this.t);
         System.out.println("Etat de la Machine = "+ this.etat);
     }
+    
+    public void modifierMachine(String type, String dmachine, float origine_x, float origine_y, float cout, float t, String etat) {
+        this.type = type;
+        this.dmachine = dmachine;
+        this.origine_x = origine_x;
+        this.origine_y = origine_y;
+        this.cout = cout;
+        this.t = t;
+        this.etat = etat;
+    }
 }
