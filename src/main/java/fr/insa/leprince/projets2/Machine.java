@@ -4,6 +4,12 @@
  */
 package fr.insa.leprince.projets2;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.util.ArrayList;
+import java.util.StringTokenizer;
+
+
 /**
  *
  * @author clema
@@ -112,5 +118,25 @@ public class Machine extends Equipement {
         this.cout = cout;
         this.t = t;
         this.etat = etat;
+    }
+    
+    public static int[] idMachinePrAnalyse(ArrayList<Machine> L) {  // va retourner le tableau contenant les machines qui ont eu un arret, 
+                                                                   //on lui envoie la liste machine de Atelier et le document à lire ? 
+        // il faut renseigner le chemin jusqu'au fichier 
+        System.out.println("renseigner le chemin d'accès au fichier");
+        String chemin = Lire.S();
+        
+        int taille = L.size();
+        int[]M = new int[taille];   // le tableau a la place pour contenir toutes les machins de l'atelier 
+        int e = 0;
+        
+        BufferedReader bfr = new BufferedReader(new FileReader(chemin)); 
+        String lignelue = bfr.readLine(); 
+        StringTokenizer t = new StringTokenizer(lignelue,"");
+        String machine = t.nextToken();
+        // verif si cette machine est dans l'atelier : comparer machine et dMachine de chaque objet de l'arrayList
+        
+
+        
     }
 }
