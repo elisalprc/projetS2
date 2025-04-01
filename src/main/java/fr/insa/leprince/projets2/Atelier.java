@@ -10,6 +10,8 @@ import java.util.ArrayList;
  *
  * @author chach
  */
+
+// sauvegarder les données dans un fichier texte par ex pour éviter de rentrer à chaque fois les infos des objets à crééer et reremplir les listes à chaque ouverture de l'application !
 public class Atelier {
     //Attributs :
         private String nom; 
