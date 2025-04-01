@@ -5,6 +5,8 @@
 package fr.insa.leprince.projets2;
 
 import java.util.ArrayList;
+import class Operation;
+import class Equipement;
 
 /**
  *
@@ -14,7 +16,7 @@ public class Gamme {
 //Atributs:
     private String refGamme;
     private ArrayList<Operation> listeOperations;
-    private ArrayList<Equipement> listeEquipement;
+    private ArrayList<Equipement> listeEquipement; //indice pair = machine et indice impair = poste ??
     private Object listeGamme;
     
 //Constructeur:
@@ -54,19 +56,22 @@ public class Gamme {
       //voir directement dans Atelier pour supprimer une gamme de l'ensemble des gammes proposées.
     
     //modifierGamme:
-    public void modifierGamme(ArrayList<Gamme> g, int i){
-        listeGamme.set(i,g); //remplacer la gamme à la position i par la game g
-    }
+      //voir directement dans Atelier
     
     //afficher une gamme
-    public void AfficherGamme(Gamme gamme){
+    public void afficherGamme(Gamme gamme){
     System.out.println("Pour réaliser la gamme de fabrication "+refGamme+" il faut les operations suivantes : "+listeOperations+" ainsi que les equipements suivants : "+listeEquipement);
 }
         
 }
 //creerGamme () ;
-    public void CreerGamme(String ref,ArrayList<Operation> listeOperations, ArrayList<Equipement> listeEquipement){
-    Gamme gamme = newGamme (ref, listeOperations, ListeEquipement);
+    public void creerGamme(String ref,ArrayList<Operation> listeOperations, ArrayList<Equipement> listeEquipement){
+        Gamme gamme = newGamme (ref, listeOperations, ListeEquipement);
+
+//cout d'une Gamme:
+    public float coutGamme(){
+// en fonction de l'equipement utilisé et de la durée de l'opp ?
+}
 }
 
 
