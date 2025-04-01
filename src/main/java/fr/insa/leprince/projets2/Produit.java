@@ -29,8 +29,5 @@ public class Produit {
         this.dProduit = dProduit;
     }
     
-    //fin getter et setter 
-    
-    
-    
+    //fin getter et setter     
 }
