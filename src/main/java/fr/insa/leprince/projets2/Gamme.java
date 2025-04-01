@@ -5,7 +5,6 @@
 package fr.insa.leprince.projets2;
 
 import java.util.ArrayList;
-import java.Atelirt.listGamme;
 
 /**
  *
@@ -16,6 +15,7 @@ public class Gamme {
     private String refGamme;
     private ArrayList<Operation> listeOperations;
     private ArrayList<Equipement> listeEquipement;
+    private Object listeGamme;
     
 //Constructeur:
     public Gamme(String refGamme, ArrayList<Operation> listeOperations, ArrayList<Equipement> listeEquipement){
@@ -55,7 +55,7 @@ public class Gamme {
     
     //modifierGamme:
     public void modifierGamme(ArrayList<Gamme> g, int i){
-        listGamme.set(i,g); //remplacer la gamme à la position i par la game g
+        listeGamme.set(i,g); //remplacer la gamme à la position i par la game g
     }
     
     //afficher une gamme
@@ -65,6 +65,9 @@ public class Gamme {
         
 }
 //creerGamme () ;
+    public void CreerGamme(String ref,ArrayList<Operation> listeOperations, ArrayList<Equipement> listeEquipement){
+    Gamme gamme = newGamme (ref, listeOperations, ListeEquipement);
+}
 
 
 
