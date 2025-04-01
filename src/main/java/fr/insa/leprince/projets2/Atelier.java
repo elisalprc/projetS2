@@ -113,5 +113,22 @@ public class Atelier {
         public void supprimerGammeFabrication(int index){
             listeGamme.remove(index);
         }
+        
+        //modification d'un élement
+        public void modifierMachine(Machine m, int index){
+            listeMachines.set(index,m); 
+        }
+        public void modifierPoste(Poste p, int index){
+            listePostes.set(index,p);
+        }
+        public void modifierProduit(Produit P, int index){
+            listeProduits.set(index,P);
+        }
+        public void modifierOperateur(Operateur O, int index){
+            listeOperateurs.set(index,O);
+        }
+        public void modifierGamme(Gamme g, int index){
+            listeGamme.set(index,g); //remplacer la gamme à la position i par la game g
+    }
        
 }
