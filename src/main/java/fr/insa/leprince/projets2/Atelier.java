@@ -13,11 +13,11 @@ import java.util.ArrayList;
 public class Atelier {
     //Attributs :
         private String nom; 
-        private ArrayList listeMachines;
-        private ArrayList listePostes;
-        private ArrayList listeProduits;
-        private ArrayList listeGamme;
-        private ArrayList listeOperateurs;
+        private ArrayList<Machine> listeMachines;
+        private ArrayList<Poste> listePostes;
+        private ArrayList<Produit> listeProduits;
+        private ArrayList<Gamme> listeGamme;
+        private ArrayList<Operateur> listeOperateurs;
         
     //Getters :
         public String getNom(){
