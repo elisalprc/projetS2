@@ -1,8 +1,9 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  */
-
 package com.mycompany.perkolation;
+
+import java.util.Random;
 
 public class Perkolation {
 	
@@ -16,14 +17,25 @@ public class Perkolation {
 		int c = Lire.i();
 		
 		int[][] Grille = new int[l][c];
-		int i=0,j=0;
+                boolean[][] casesVisitees = new boolean[l][c];
+		int i=0,j=0,m,n;
+                boolean v=false;
 		
 		perkolation(Grille,p,l,c);
-                boolean v =eltInfini(Grille,l,c,i,j);
-                System.out.println(v);
                 
+                for(int ligne=0;ligne<l;ligne++) {
+                    v =eltInfini(Grille,casesVisitees,l,c,ligne,0);
+                    if (v==true) {
+                        break; }
+
+                    }
+                
+                
+                System.out.println(v);
+ 
+}    
 	
-}
+
 	
 	public static void perkolation(int[][]G, float p, int l, int c) {
 		int i,j;
@@ -65,19 +77,18 @@ public class Perkolation {
 		
 }
         // renvoie true si chemin de gauche à droite trouvé, false sinon
-        public static boolean eltInfini(int[][] G,int l, int c, int i, int j) { 
-            boolean[][] gVisited = new boolean[l][c];            
-            if(i<0 || j<0 || G[i][j] == 0 || gVisited[i][j] == true) {
+        public static boolean eltInfini(int[][] G, boolean[][] cVisitees,int l, int c, int i, int j) {            
+            if(i<0 || j<0 || G[i][j] == 0 || cVisitees[i][j] == true || i>l || j>c) {
                 return false;
             }
             
-            if(j==c) {
+            if(j==c-1) {
                 return true;
             }
             
-            gVisited[i][j] = true;
+            cVisitees[i][j] = true;
             
-            return eltInfini(G,l,c,i+1,j) || eltInfini(G,l,c,i-1,j) || eltInfini(G,l,c,i,j+1) || eltInfini(G,l,c,i,j-1);
+            return eltInfini(G,cVisitees,l,c,i+1,j) || eltInfini(G,cVisitees,l,c,i-1,j) || eltInfini(G,cVisitees,l,c,i,j+1) || eltInfini(G,cVisitees,l,c,i,j-1);
           
         }
             
