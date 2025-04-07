@@ -24,20 +24,8 @@ public class Perkolation {
 	
 	public static void perkolation(int[][]G, float p, int l, int c) {
 		int i,j;
-		for(i=1;i<l;i=i+2){       // les zones inacessibles "les carrés" 
-			for(j=1;j<c;j=j+2) {
-				G[i][j]= 8;
-			}
-		} 
-		
-		for(i=0;i<l;i+=2) {     // les points (on les rend "accessibles")
-			for(j=0;j<c;j+=2) {
-				G[i][j] = 1;
-			}
-		}
-		
-		
-		for(i=0;i<l;i++) {       //apparition aléatoires des bords 
+                
+                for(i=0;i<l;i++) {       //apparition aléatoires des bords 
 			for(j=0;j<c;j++) {
 				if(G[i][j]==0) {
 					if(Math.random() <= p){
@@ -46,6 +34,18 @@ public class Perkolation {
 						G[i][j] = 0; 
 					}
 				}
+			}
+		}
+                
+		for(i=1;i<l;i=i+2){       // les zones inacessibles "les carrés" 
+			for(j=1;j<c;j=j+2) {
+				G[i][j]= 0;
+			}
+		} 
+		
+		for(i=0;i<l;i+=2) {     // les points (on les rend "accessibles")
+			for(j=0;j<c;j+=2) {
+				G[i][j] = 1;
 			}
 		}
 		
