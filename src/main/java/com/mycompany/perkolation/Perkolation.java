@@ -16,9 +16,12 @@ public class Perkolation {
 		int c = Lire.i();
 		
 		int[][] Grille = new int[l][c];
-		int i,j;
+		int i=0,j=0;
 		
 		perkolation(Grille,p,l,c);
+                boolean v =eltInfini(Grille,l,c,i,j);
+                System.out.println(v);
+                
 	
 }
 	
@@ -61,4 +64,22 @@ public class Perkolation {
 		//public static void kompo
 		
 }
+        // renvoie true si chemin de gauche à droite trouvé, false sinon
+        public static boolean eltInfini(int[][] G,int l, int c, int i, int j) { 
+            boolean[][] gVisited = new boolean[l][c];            
+            if(i<0 || j<0 || G[i][j] == 0 || gVisited[i][j] == true) {
+                return false;
+            }
+            
+            if(j==c) {
+                return true;
+            }
+            
+            gVisited[i][j] = true;
+            
+            return eltInfini(G,l,c,i+1,j) || eltInfini(G,l,c,i-1,j) || eltInfini(G,l,c,i,j+1) || eltInfini(G,l,c,i,j-1);
+          
+        }
+            
+    
 }
