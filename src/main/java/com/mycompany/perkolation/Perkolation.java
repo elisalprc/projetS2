@@ -74,7 +74,7 @@ public class Perkolation {
 		}
 	
 	
-		//public static void kompo
+		
 		
 }
         // renvoie true si chemin de gauche à droite trouvé, false sinon
@@ -92,7 +92,7 @@ public class Perkolation {
             
             cVisitees[i][j] = true;
             
-            return eltInfini(G,cVisitees,l,c,i+1,j) || eltInfini(G,cVisitees,l,c,i-1,j) || eltInfini(G,cVisitees,l,c,i,j+1) || eltInfini(G,cVisitees,l,c,i,j-1);
+            return eltInfini(G,cVisitees,l,c,i,j+1) || eltInfini(G,cVisitees,l,c,i+1,j) || eltInfini(G,cVisitees,l,c,i-1,j) || eltInfini(G,cVisitees,l,c,i,j-1);
           
         }
             
