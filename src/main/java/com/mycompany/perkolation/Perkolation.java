@@ -3,8 +3,6 @@
  */
 package com.mycompany.perkolation;
 
-import java.util.Random;
-
 public class Perkolation {
 	
 	public static void main (String[] args) {
@@ -17,21 +15,24 @@ public class Perkolation {
 		int c = Lire.i();
 		
 		int[][] Grille = new int[l][c];
+		perkolation(Grille,p,l,c);
+                
                 boolean[][] casesVisitees = new boolean[l][c];
 		int i=0,j=0,m,n;
                 boolean v=false;
-		
-		perkolation(Grille,p,l,c);
                 
-                for(int ligne=0;ligne<l;ligne++) {
-                    v =eltInfini(Grille,casesVisitees,l,c,ligne,0);
+                for(int ligne=0;ligne<l;ligne++) {   //"on essaie de partir de chaque case de la prmeiere ligne"
+                    v = eltInfini(Grille,casesVisitees,l,c,ligne,0);
                     if (v==true) {
                         break; }
 
                     }
                 
                 
-                System.out.println(v);
+                if(v) {
+                    System.out.println("Es gibt eine undendliche zusammenhangende komponente");
+                }
+                else { System.out.println("keine undendliche zusammenhangende komponente gefunden :( "); }
  
 }    
 	
@@ -78,9 +79,12 @@ public class Perkolation {
 }
         // renvoie true si chemin de gauche à droite trouvé, false sinon
         public static boolean eltInfini(int[][] G, boolean[][] cVisitees,int l, int c, int i, int j) {            
-            if(i<0 || j<0 || G[i][j] == 0 || cVisitees[i][j] == true || i>l || j>c) {
+            if(i<0 || j<0 || i>=l || j>=c) {
                 return false;
             }
+            else if( G[i][j] == 0 || cVisitees[i][j] == true) {
+                return false; 
+            }                                                   // le elif evite IOException
             
             if(j==c-1) {
                 return true;
