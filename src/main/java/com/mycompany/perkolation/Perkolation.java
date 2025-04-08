@@ -15,7 +15,9 @@ public class Perkolation {
 		int c = Lire.i();
 		
 		int[][] Grille = new int[l][c];
-		perkolation(Grille,p,l,c);
+                Grille = perkolation(p,l,c);
+                affichePerkolation(Grille);
+		
                 
                 boolean[][] casesVisitees = new boolean[l][c];
 		int i=0,j=0,m,n;
@@ -32,15 +34,18 @@ public class Perkolation {
                 if(v) {
                     System.out.println("Es gibt eine undendliche zusammenhangende komponente");
                 }
-                else { System.out.println("keine undendliche zusammenhangende komponente gefunden :( "); }
+                else { System.out.println("keine undendliche zusammenhangende komponente gefunden :( "); }  // fin de l'exemple 
+                
+                //statistics(p,l,c);
+}
  
-}    
+    
 	
 
 	
-	public static void perkolation(int[][]G, float p, int l, int c) {
+	public static int[][] perkolation(float p, int l, int c) {
 		int i,j;
-                
+                int[][] G = new int[l][c];
                 for(i=0;i<l;i++) {       //apparition aléatoires des bords 
 			for(j=0;j<c;j++) {
 				if(G[i][j]==0) {
@@ -64,19 +69,21 @@ public class Perkolation {
 				G[i][j] = 1;
 			}
 		}
-		
-		//affichage grille pour verif 
-		for(i=0;i<l;i++){
-			System.out.println(" ");
-			for(j=0;j<c;j++) {
-				System.out.print(G[i][j] + "  ");
-			}
-		}
-	
-	
-		
+
+                return(G);
 		
 }
+
+        public static void affichePerkolation(int[][] G){
+            int i=0,j=0;
+            for(i=0;i<G.length;i++){
+		System.out.println(" ");
+		for(j=0;j<G[0].length;j++) {
+			System.out.print(G[i][j] + "  ");
+		}
+	}
+}
+
         // renvoie true si chemin de gauche à droite trouvé, false sinon
         public static boolean eltInfini(int[][] G, boolean[][] cVisitees,int l, int c, int i, int j) {            
             if(i<0 || j<0 || i>=l || j>=c) {
@@ -95,6 +102,19 @@ public class Perkolation {
             return eltInfini(G,cVisitees,l,c,i,j+1) || eltInfini(G,cVisitees,l,c,i+1,j) || eltInfini(G,cVisitees,l,c,i-1,j) || eltInfini(G,cVisitees,l,c,i,j-1);
           
         }
+        
+        /*public static void statistics(float p, int l, int c) {
             
-    
+            System.out.println("taille echantillon =");
+            int t = Lire.i();
+            int[][] tabAlea = new int[l][c];
+            boolean[] infini = new boolean[t];
+            
+            for(int i = 0;i<t;i++) {
+                tabAlea = perkolation(tabAlea,p,l,c);
+        }
+            
+        }  */
+
 }
+
