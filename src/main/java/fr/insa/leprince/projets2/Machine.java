@@ -119,7 +119,8 @@ public class Machine extends Equipement {
         this.t = t;
         this.etat = etat;
     }
-    
+     
+    /*
     public static int[] idMachinePrAnalyse(ArrayList<Machine> L) {  // va retourner le tableau contenant les machines qui ont eu un arret, 
                                                                    //on lui envoie la liste machine de Atelier et le document à lire ? 
         // il faut renseigner le chemin jusqu'au fichier 
@@ -130,6 +131,7 @@ public class Machine extends Equipement {
         int[]M = new int[taille];   // le tableau a la place pour contenir toutes les machins de l'atelier 
         int e = 0;
         
+        
         BufferedReader bfr = new BufferedReader(new FileReader(chemin)); 
         String lignelue = bfr.readLine(); 
         StringTokenizer t = new StringTokenizer(lignelue,"");
@@ -138,5 +140,5 @@ public class Machine extends Equipement {
         
 
         
-    }
+    } */
 }

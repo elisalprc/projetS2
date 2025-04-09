@@ -43,4 +43,9 @@ public class Personne {
         this.id = id;
     }
     
+    @Override
+    public String toString() {
+        return this.prenom + " " + this.nom + ", code : " + this.id;
+    }
+    
 }

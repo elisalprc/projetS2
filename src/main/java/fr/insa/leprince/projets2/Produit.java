@@ -12,6 +12,11 @@ public class Produit {
     private String codeProduit;
     private String dProduit;
 
+    public Produit(String c, String d) {
+        this.codeProduit = c;
+        this.dProduit = d;
+    }
+    
     //getter et setter 
     public String getCodeProduit() {
         return codeProduit;
@@ -29,5 +34,11 @@ public class Produit {
         this.dProduit = dProduit;
     }
     
-    //fin getter et setter     
+    //fin getter et setter
+    
+    @Override
+    public String toString(){
+        return "produit : " + this.dProduit + ", code : " + this.codeProduit;
+    }
+    
 }

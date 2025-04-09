@@ -24,4 +24,9 @@ public class Operateur extends Personne {
     public Operateur(String nom, String prenom, int id, ArrayList<Equipement> ListeEquipements) {
         super(nom, prenom, id);
     }
+    
+    public void ajoutEquipement(Equipement e) {
+        this.ListeEquipements.add(e);
+    }
+    
 }
