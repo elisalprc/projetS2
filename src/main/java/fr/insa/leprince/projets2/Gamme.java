@@ -61,7 +61,7 @@ public class Gamme {
     }
     //creerGamme () ;
     public void creerGamme(String ref,ArrayList<Operation> listeOperations, ArrayList<Equipement> listeEquipement){
-        Gamme gamme = newGamme (ref, listeOperations, ListeEquipement);
+        Gamme gamme = new Gamme (ref, listeOperations, listeEquipement);
         listeGamme.add(gamme);
     }
     //cout d'une Gamme:
