@@ -35,8 +35,14 @@ public class ProjetS2 {
         A1.ajoutProduit(a);
         System.out.println(A1.getListeProduits());  //!\\ il faut définir un toString pour chaque classe pour que ça s'affiche correctement 
                                                     // ou autre chose mais je sais pas 
-        Operateur op = new Operateur("alan","turing",1,LEQ);
+        Equipement test = new Equipement("e1","essai");
+        Operateur op = new Operateur("turing","alan",1,LEQ);
+        op.ajoutEquipement(test);
+        Operateur opa = new Operateur("bzz","maya",2,LEQ); //meme liste eq 
         A1.ajoutOperateur(op);
+        A1.ajoutOperateur(opa);
+        System.out.println(A1.getListeOperateurs());
+        
         
         
     }
