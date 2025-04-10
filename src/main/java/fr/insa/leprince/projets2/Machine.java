@@ -100,6 +100,12 @@ public class Machine extends Equipement {
         this.etat = etat;
     }
     
+    @Override
+    public String toString() {
+        return "machine : " + this.dmachine + " ..." ;
+        
+    }
+    
     public void afficherMachine(){
         System.out.println("référence de la machine = "+ this.refMachine);
         System.out.println("type de la machine = "+ this.type);
