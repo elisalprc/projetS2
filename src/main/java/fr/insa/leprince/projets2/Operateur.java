@@ -23,10 +23,17 @@ public class Operateur extends Personne {
 
     public Operateur(String nom, String prenom, int id, ArrayList<Equipement> ListeEquipements) {
         super(nom, prenom, id);
+        this.ListeEquipements = new ArrayList<>();
+        this.ListeEquipements = ListeEquipements;
     }
     
     public void ajoutEquipement(Equipement e) {
         this.ListeEquipements.add(e);
+    }
+    
+    @Override
+    public String toString(){
+        return "identite : " + getPrenom() + " " + getNom() + ", eq : " + this.ListeEquipements;
     }
     
 }
