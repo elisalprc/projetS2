@@ -38,6 +38,10 @@ public class Poste extends Equipement {
     public void setListeMachine(ArrayList<Machine> listeMachine) {
         this.listeMachine = listeMachine;
     }
+    
+    public void ajoutMachine(Machine m) {
+        this.listeMachine.add(m);
+    }
 
     public Poste(String refPoste, String dPoste, ArrayList<Machine> listeMachine, String refEquipement, String dEquipement) {
         super(refEquipement, dEquipement);
@@ -45,5 +49,5 @@ public class Poste extends Equipement {
         this.dPoste = dPoste;
         this.listeMachine = listeMachine;
     }
-    
+    // rq : pas besoin de dPoste et refPoste car la super classe lui assigne deja je crois (ca fait repeter la meme chose)
 }
