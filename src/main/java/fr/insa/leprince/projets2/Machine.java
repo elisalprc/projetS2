@@ -100,12 +100,6 @@ public class Machine extends Equipement {
         this.etat = etat;
     }
     
-    @Override
-    public String toString() {
-        return "machine : " + this.dmachine + " ..." ;
-        
-    }
-    
     public void afficherMachine(){
         System.out.println("référence de la machine = "+ this.refMachine);
         System.out.println("type de la machine = "+ this.type);
@@ -114,6 +108,11 @@ public class Machine extends Equipement {
         System.out.println("cout de la Machine = "+ this.cout);
         System.out.println("temps d'utilisation de la Machine = "+ this.t);
         System.out.println("Etat de la Machine = "+ this.etat);
+    }
+    
+    @Override 
+    public String toString() {
+        return this.dmachine + ", ref : " + this.refMachine + ", type : " + this.type + ", endroit : " + this.origine_x + "," + this.origine_y + ", cout : " + this.cout + " e/h, temps : " +this.t + " h, etat : " + this.etat;
     }
     
     public void modifierMachine(String type, String dmachine, float origine_x, float origine_y, float cout, float t, String etat) {
