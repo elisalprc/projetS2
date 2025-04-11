@@ -27,6 +27,7 @@ public class ProjetS2 {
         ArrayList<Gamme> LG = new ArrayList<>();
         ArrayList<Operateur> LOP = new ArrayList<>();
         Atelier A1 = new Atelier("atelier test",LM,LPO,LPRO,LG,LOP);
+        ArrayList<Machine> LEQp = new ArrayList<>();
         
         
         // on va entrer des infos dans l'atelier 
@@ -42,6 +43,19 @@ public class ProjetS2 {
         A1.ajoutOperateur(op);
         A1.ajoutOperateur(opa);
         System.out.println(A1.getListeOperateurs());
+        
+        Machine M1 = new Machine("redTEST","decoupeuse","decoup laser",2,2,10,2,"libre","eqM1","machine1");
+        Machine M2 = new Machine("refTEST2","imprimante","imp 3D",4,4,30,8,"libre","eqM2","machine2");
+        A1.ajoutMachine(M1);
+        System.out.println(A1.getListeMachines());
+        Poste poste1 = new Poste("poste d'essai","poste1",LEQp,"poste d'essai","poste1");
+        poste1.ajoutMachine(M1);
+        poste1.ajoutMachine(M2);
+        A1.ajoutPoste(poste1);
+        System.out.println(A1.getListePostes());
+        System.out.println(poste1.getListeMachine());
+        
+        
         
         
         
