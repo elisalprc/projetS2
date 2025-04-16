@@ -75,26 +75,8 @@ public class ProjetS2 {
         
         // pour écrire dans le fichier texte
         try{
-            WriteFile patate  = new WriteFile(file_name, true); 
-            patate.writeToFile("Salut bonsoir je suis une patate ambulante ! "
-                    + "Quoi tu n'as jamais entendu parler de tubercule narrateur ? "
-                    + "Fichtre ! Je ne sais que dire sinon que je suis interloqué ! "
-                    + "Ma fierté en prends un sacré coup, il faut dire après tout que nous faisons parti avec les légumineuse des meilleurs conteurs et orateurs interstellaires ! "
-                    + "Dans bien de nombreux endroit où j'ai fait escale l'on m'acclamait à vive voix. "
-                    + "Tous s'époumonaient à hurler et quémander d'autres histoires. "
-                    + "Il faut dire que certains vivent tellement reclus que chaque histoire devient légende et à le gout d'or. "
-                    + "Quoi ? tu ne vois pas ce que c'est ??? Diantre mais qui est tu donc pour ignorer ceci ? "
-                    + "N'importe quel ignare même les plus grands qu'il m'ai été donné de croiser avaient tous entendu parlés de cette pierre fabuleuse ! "
-                    + "Roger c'est ça ? Moi c'est... enfin cela est sans importance après tout qu'est un nom sinon qu'une suite de lettre destinée à s'identifier ? "
-                    + "Je peux au moins te confier être une suivante de la Dame. Que dis tu ? Tu veux ma mort c'est bien ça ? "
-                    + "Ne pas connaitre la Dame c'est comme penser que nous sommes les seuls à respirer et festoyer ! "
-                    + "Pardi l'ami, c'est bien trop pour moi ! La Dame est en chaque coeur et chaque être ! "
-                    + "Elle fait foi dans le cosmère entier, foi de patate ! Alors mon petit Roger, si tu as un peu de temps, que dis-je, que tu en ai à disposition ou pas, assied toi auprès de moi et écoute ce que j'ai à te dire. "
-                    + "Ne pas connaitre l'or ou n'avoir jamais vu tubercule parler peut aller mais ignorer jusqu'à l'existence de la Dame, c'est dépasser les bornes... "
-                    + "Il y a fort longtemps mon brave si longtemps que rare sont les peuples y ayant assistés... "
-                    + "Non Roger, ce n'est pas une question de siècle ni de millénaires met toi bien ça dans le crâne, c'est tellement plus que même le plus sage de tes compatriotes ne saurait imaginer un temps aussi lointain. "
-                    + "Bien avant que le cosmère ne prenne entièrement forme, le rire empreint de légèreté et d'innocence d'une enfant éclatait, faisant de fait vibrer jusqu'aux entrailles de l'étoile sur laquelle elle et les siens se trouvaient. "
-                    + "L'étoile Irma. La jeune fille s'appelait Aeryn. Ahhh oui c'est bien elle, Aeryn est la Dame mais cesse donc de m'interrompre et écoute la suite...");
+            WriteFile fichier_texte  = new WriteFile(file_name, true); 
+            fichier_texte.writeToFile("Statistiques projet info");
                 System.out.println("Text File Written To"); //pour dire que ça a bien écrit dans le fichier texte :)
         }
         catch(IOException e){
