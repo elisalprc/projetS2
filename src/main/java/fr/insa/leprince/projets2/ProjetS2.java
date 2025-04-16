@@ -59,7 +59,7 @@ public class ProjetS2 {
 // =====================================================================================       
 // IMPORTANT : pour ecrire et lire dans un fichier texte donc sauvegarder des données !
 // =====================================================================================   
-        String file_name = "C:/Documents/Test"; //on aura besoin du nom du fichier par la suite ça risque de bloquer/buguer à ce niveau là :') vu que j'ai mis le fichier chez moi... ou alors on créée tous un fichier qu'on met au même endroit ???? en tout cas le path c'est le chemin pour y acceder :)
+        String file_name = "C:/Documents/Test info"; //on aura besoin du nom du fichier par la suite ça risque de bloquer/buguer à ce niveau là :') vu que j'ai mis le fichier chez moi... ou alors on créée tous un fichier qu'on met au même endroit ???? en tout cas le path c'est le chemin pour y acceder :)
         // pour lire un fichier texte
         try{
             ReadFile file = new ReadFile(file_name);
