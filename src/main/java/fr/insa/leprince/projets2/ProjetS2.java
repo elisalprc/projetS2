@@ -96,3 +96,7 @@ public class ProjetS2 {
         }
     }
 }
+//Cahier de maintenance de l'atelier de fabrication : 
+//
+//
+//Date       Heure   Machine   Evènements   Opérateur   Cause
