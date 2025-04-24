@@ -59,7 +59,7 @@ public class ProjetS2 {
 // =====================================================================================       
 // IMPORTANT : pour ecrire et lire dans un fichier texte donc sauvegarder des données !
 // =====================================================================================   
-        String file_name = "C:/Documents/Test info"; //on aura besoin du nom du fichier par la suite ça risque de bloquer/buguer à ce niveau là :') vu que j'ai mis le fichier chez moi... ou alors on créée tous un fichier qu'on met au même endroit ???? en tout cas le path c'est le chemin pour y acceder :)
+        String file_name = "C:/Documents/SuiviMaintenance"; //on aura besoin du nom du fichier par la suite ça risque de bloquer/buguer à ce niveau là :') vu que j'ai mis le fichier chez moi... ou alors on créée tous un fichier qu'on met au même endroit ???? en tout cas le path c'est le chemin pour y acceder :)
         // pour lire un fichier texte
         try{
             ReadFile file = new ReadFile(file_name);
@@ -76,7 +76,19 @@ public class ProjetS2 {
         // pour écrire dans le fichier texte
         try{
             WriteFile fichier_texte  = new WriteFile(file_name, true); 
-            fichier_texte.writeToFile("Statistiques projet info");
+            System.out.println("entrer la date sous le format : jjmmaaaa");
+            String Date = Lire.S();
+            System.out.println("entrer l'heure sous le format : hh:mm");
+            String Heure = Lire.S();
+            System.out.println("entrer la Machine sous le format : Mach_n");
+            String Machine = Lire.S();
+            System.out.println("entrer l'évènement sous le format : A (pour arrêt) ou D (pour démarrage)");
+            String Evenement = Lire.S();
+            System.out.println("entrer l'opérateur sous le format : OPccc");
+            String Operateur = Lire.S();
+            System.out.println("entrer la cause : panne, accident, maintenance ou x si aucun des trois");
+            String Cause = Lire.S();
+            fichier_texte.writeToFile(Date+"   "+Heure+"   "+Machine+"    "+Evenement+"            "+Operateur+"       "+Cause);
                 System.out.println("Text File Written To"); //pour dire que ça a bien écrit dans le fichier texte :)
         }
         catch(IOException e){
