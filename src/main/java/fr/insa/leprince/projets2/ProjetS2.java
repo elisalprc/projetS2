@@ -8,6 +8,7 @@
 
 package fr.insa.leprince.projets2;
 
+import static fr.insa.leprince.projets2.Maintenance.GestionAtelier;
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -54,49 +55,7 @@ public class ProjetS2 {
         A1.ajoutPoste(poste1);
         System.out.println(A1.getListePostes());
         System.out.println(poste1.getListeMachine());
-  
         
-// =====================================================================================       
-// IMPORTANT : pour ecrire et lire dans un fichier texte donc sauvegarder des données !
-// =====================================================================================   
-        String file_name = "C:/Documents/SuiviMaintenance"; //on aura besoin du nom du fichier par la suite ça risque de bloquer/buguer à ce niveau là :') vu que j'ai mis le fichier chez moi... ou alors on créée tous un fichier qu'on met au même endroit ???? en tout cas le path c'est le chemin pour y acceder :)
-        // pour lire un fichier texte
-        try{
-            ReadFile file = new ReadFile(file_name);
-            String[] lignes = file.OpenFile();
-            int i;
-            for (i=0; i<lignes.length;i++){
-                System.out.println(lignes[i]);
-            }
-        }
-        catch(IOException e){
-            System.out.println("Une erreur est survenue à la lecture, désolé, veuillez recommencer");           
-        }
-        
-        // pour écrire dans le fichier texte
-        try{
-            WriteFile fichier_texte  = new WriteFile(file_name, true); 
-            System.out.println("entrer la date sous le format : jjmmaaaa");
-            String Date = Lire.S();
-            System.out.println("entrer l'heure sous le format : hh:mm");
-            String Heure = Lire.S();
-            System.out.println("entrer la Machine sous le format : Mach_n");
-            String Machine = Lire.S();
-            System.out.println("entrer l'évènement sous le format : A (pour arrêt) ou D (pour démarrage)");
-            String Evenement = Lire.S();
-            System.out.println("entrer l'opérateur sous le format : OPccc");
-            String Operateur = Lire.S();
-            System.out.println("entrer la cause : panne, accident, maintenance ou x si aucun des trois");
-            String Cause = Lire.S();
-            fichier_texte.writeToFile(Date+"   "+Heure+"   "+Machine+"    "+Evenement+"            "+Operateur+"       "+Cause);
-                System.out.println("Text File Written To"); //pour dire que ça a bien écrit dans le fichier texte :)
-        }
-        catch(IOException e){
-            System.out.println("Une erreur est survenue à l'écriture, désolé, veuillez recommencer");           
-        }
+        GestionAtelier();
     }
 }
-//Cahier de maintenance de l'atelier de fabrication : 
-//
-//
-//Date       Heure   Machine   Evènements   Opérateur   Cause
