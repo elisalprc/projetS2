@@ -73,7 +73,7 @@ public class Verification {
         System.out.println("entrer l'horaire sous le format : hh:mm ");
             String entrée = Lire.S();
             while (HoraireValide(entrée) == false){
-               System.out.println("L'horaire entré est incorect");
+               System.out.println("L'horaire entré est incorect (Rappel : l'atelier ouvre à 10 heures et ferme à 20h30.)");
                entrée = Lire.S();
             }
             return entrée; 
@@ -83,7 +83,7 @@ public class Verification {
     public static int MachineInputValid(ArrayList<Machine> LM){
         System.out.println("entrer le numéro de la machine utilisée (de 1 à "+LM.size()+")");
         int entrée = Lire.i();
-        while (entrée > LM.size()){
+        while ((entrée > LM.size())||(entrée < 1)){
             System.out.println("la saisie de la machine est erronée veuillez recommencer (de 1 à "+LM.size()+")");
             entrée = Lire.i();   
         }
@@ -102,10 +102,10 @@ public class Verification {
     }
     
     //vérification de l'opérteur: 
-    public static int OperateurInputValide(ArrayList<Machine> LOP){
-    System.out.println("entrer le numéro de l'opérateur (3 chiffres)");
+    public static int OperateurInputValide(ArrayList<Operateur> LOP){
+    System.out.println("entrer le numéro de l'opérateur (entre 100 et "+(100+LOP.size())+")");
     int entrée = Lire.i(); 
-    while (entrée > LOP.size()){
+    while ((entrée > 100+LOP.size())||(entrée < 100)){
             System.out.println("la saisie de l'opérateur  est erronée veuillez recommencer (de 100 à "+(100+LOP.size())+")");
             entrée = Lire.i();   
         }
